@@ -2,8 +2,6 @@
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
 
-// Initialize Resend with API Key (Should be in env vars)
-// For now, we will assume the user has to set RESEND_API_KEY
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
 export const POST: APIRoute = async ({ request }) => {
