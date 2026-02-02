@@ -1,0 +1,36 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+
+const jobs = [
+    {
+        title: 'Desarrollador Web Full Stack',
+        company: 'Freelance',
+        period: '2023 - Presente',
+        description: 'Desarrollo de aplicaciones web personalizadas para diversos clientes, implementando soluciones completas desde el diseño hasta el despliegue.',
+        achievements: ['Desarrollo de más de 10 proyectos web exitosos', 'Implementación de sistemas de gestión empresarial', 'Optimización de rendimiento y SEO'],
+        tags: ['React', 'Next.js', 'Node.js', 'PostgreSQL', 'Tailwind CSS']
+    },
+    {
+        title: 'Desarrollador Frontend',
+        company: 'Proyectos Académicos',
+        period: '2022 - 2023',
+        description: 'Creación de interfaces de usuario modernas y responsivas, enfocadas en la experiencia del usuario y las mejores prácticas de desarrollo.',
+        achievements: ['Desarrollo de portafolios y landing pages', 'Implementación de diseños responsive', 'Colaboración en equipos ágiles'],
+        tags: ['HTML', 'CSS', 'JavaScript', 'React', 'Git']
+    }
+];
+---
+
+<section id='experience' class='py-20 animate-fade-in'>
+    <div class='container mx-auto px-4 md:px-6'>
+        <div class='text-left mb-12'>
+            <h2 class='text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4'>Experiencia</h2>
+            <div class='h-1 w-20 bg-accent rounded-full mb-4'></div>
+            <p class='text-muted-foreground'>Mi trayectoria profesional en el desarrollo de software y sistemas de información.</p>
+        </div>
+
+        <div class='space-y-8'>
+            {jobs.map((job) => <ExperienceItem {...job} />)}
+        </div>
+    </div>
+</section>

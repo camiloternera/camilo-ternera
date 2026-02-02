@@ -1,0 +1,60 @@
+---
+import {Briefcase, Calendar} from 'lucide-react';
+
+interface Props {
+    title: string;
+    company: string;
+    period: string;
+    description: string;
+    achievements: string[];
+    tags: string[];
+}
+
+const {title, company, period, description, achievements, tags} = Astro.props;
+---
+
+<div class='bg-card border border-border rounded-xl p-6 md:p-8 hover:border-accent/40 transition-colors'>
+    <div class='flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2'>
+        <div class='flex items-center gap-3'>
+            <div class='p-2 rounded-lg bg-secondary/50 text-accent'>
+                <Briefcase className='h-5 w-5' />
+            </div>
+            <div>
+                <h3 class='text-xl font-bold text-foreground'>{title}</h3>
+                <p class='text-base text-muted-foreground'>{company}</p>
+            </div>
+        </div>
+        <div class='flex items-center gap-2 text-sm text-muted-foreground bg-secondary/30 px-3 py-1 rounded-full w-fit'>
+            <Calendar className='h-4 w-4' />
+            <span>{period}</span>
+        </div>
+    </div>
+
+    <p class='text-muted-foreground mb-6 leading-relaxed'>
+        {description}
+    </p>
+
+    <div class='mb-6'>
+        <h4 class='text-sm font-semibold text-foreground mb-3 uppercase tracking-wider'>Logros destacados:</h4>
+        <ul class='space-y-2'>
+            {
+                achievements.map((achievement) => (
+                    <li class='flex items-start gap-2 text-muted-foreground'>
+                        <span class='mt-2 h-1.5 w-1.5 rounded-full bg-accent flex-shrink-0' />
+                        <span>{achievement}</span>
+                    </li>
+                ))
+            }
+        </ul>
+    </div>
+
+    <div class='flex flex-wrap gap-2 pt-2 border-t border-border/50'>
+        {
+            tags.map((tag) => (
+                <span class='inline-flex items-center px-2.5 py-0.5 rounded-md text-xs font-medium bg-secondary text-secondary-foreground border border-transparent hover:border-accent/30 transition-colors'>
+                    {tag}
+                </span>
+            ))
+        }
+    </div>
+</div>

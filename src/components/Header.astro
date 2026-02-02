@@ -1,0 +1,18 @@
+---
+import NavBar from "@/components/NavBar.astro";
+import { Button } from "@/components/ui/button";
+---
+
+<header class="fixed top-0, left-0 right-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-10 sm:h-14 lg:h-16">
+            <button class="text-xl font-bold text-foreground hover:text-primary transition-colors cursor-pointer">
+                CT
+            </button>
+            <NavBar />
+            <Button variant="outline" className="hidden lg:inline-flex cursor-pointer">
+                Hablemos
+            </Button>
+        </div>
+    </div>
+</header>

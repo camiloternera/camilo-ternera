@@ -1,0 +1,123 @@
+{
+    "personal": {
+        "name": "Camilo Ternera",
+        "ubication": "Barranquilla, Colombia",
+        "avatar": "@/assets/img/recortada 3.jpg",
+        "curriculum": "https://camiloternera.com"
+    },
+    "skills": [
+        {
+            "name": "HTML",
+            "icon": "html"
+        },
+        {
+            "name": "CSS",
+            "icon": "css"
+        },
+        {
+            "name": "JavaScript",
+            "icon": "javascript"
+        },
+        {
+            "name": "React JS",
+            "icon": "react"
+        },
+        {
+            "name": "SQL Server",
+            "icon": "sql-server"
+        },
+        {
+            "name": "C#",
+            "icon": "csharp"
+        },
+        {
+            "name": ".NET Framework",
+            "icon": "dotnet-framework"
+        },
+        {
+            "name": "Python",
+            "icon": "python"
+        },
+        {
+            "name": "Astro JS",
+            "icon": "astro"
+        },
+        {
+            "name": "Tailwind CSS",
+            "icon": "tailwindcss"
+        },
+        {
+            "name": "TypeScript",
+            "icon": "typescript"
+        },
+        {
+            "name": "Git",
+            "icon": "git"
+        },
+        {
+            "name": "GitHub",
+            "icon": "github"
+        }
+    ],
+    "experience": [
+        {
+            "company": "DinamicApps S.A.S",
+            "role": "Desarrollador Full Stack",
+            "description": "Desarrollador Full Stack con más de 10 años de experiencia en el desarrollo de aplicaciones web y móviles.",
+            "startDate": "2022-04-02",
+            "endDate": "2024-05-20",
+            "responsibilities": [
+                "Diseñar, crear o modificar estructura de base de datos en SQL Server",
+                "Implementar lógica de negocio y manipular datos mediante LINQ para consultas eficientes.",
+                "Creación de componentes reutilizables, gestión de estado e integración de APIs."
+            ]
+        }
+    ],
+    "contact": {
+        "email": "camiloternera@gmail.com",
+        "socials": [
+            {
+                "name": "GitHub",
+                "url": "https://github.com/camiloternera",
+                "icon": "github"
+            },
+            {
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/camiloternera/",
+                "icon": "linkedin"
+            },
+            {
+                "name": "Twitter",
+                "url": "https://twitter.com/camiloternera",
+                "icon": "twitter"
+            },
+            {
+                "name": "Instagram",
+                "url": "https://www.instagram.com/camiloternera/",
+                "icon": "instagram"
+            },
+            {
+                "name": "Facebook",
+                "url": "https://www.facebook.com/camiloternera/",
+                "icon": "facebook"
+            },
+            {
+                "name": "YouTube",
+                "url": "https://www.youtube.com/camiloternera/",
+                "icon": "youtube"
+            }
+        ]
+    },
+    "seo": {
+        "title": "Camilo Ternera - Desarrollador Full Stack",
+        "description": "Desarrollador Full Stack con más de 10 años de experiencia en el desarrollo de aplicaciones web y móviles.",
+        "keywords": [
+            "Desarrollador Full Stack",
+            "Desarrollo Web",
+            "Desarrollo Móvil",
+            "Desarrollo de Aplicaciones",
+            "Desarrollo de Software"
+        ],
+        "ogimage": "https://github.com/camiloternera.png"
+    }
+}

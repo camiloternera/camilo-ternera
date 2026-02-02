@@ -1,0 +1,79 @@
+---
+import {Github, Linkedin, Mail, ArrowRight, MapPin} from 'lucide-react';
+import {type Personal} from '../types/portafolio';
+import data from '../data/portafolio.json';
+import {Image} from 'astro:assets';
+import profileImage from '../assets/img/recortada 3.jpg';
+
+const personal: Personal = data.personal;
+---
+
+<section id='hero' class='min-h-[90vh] flex flex-col justify-center py-20 animate-fade-in'>
+    <div class='container mx-auto px-4 md:px-6'>
+        <div class='grid md:grid-cols-2 gap-12 items-center'>
+            <div class='max-w-3xl space-y-6'>
+                <h2 class='text-accent font-medium tracking-wide text-lg animate-slide-in-bottom animation-delay-100'>Hola, mi nombre es</h2>
+
+                <div class='space-y-4'>
+                    <h1 class='text-5xl md:text-7xl font-bold tracking-tight text-foreground animate-slide-in-bottom animation-delay-200'>{personal.name}</h1>
+                    <h2 class='text-4xl md:text-6xl font-bold tracking-tight text-muted-foreground animate-slide-in-bottom animation-delay-300'>Construyo experiencias web excepcionales</h2>
+                </div>
+
+                <p class='max-w-xl text-lg text-muted-foreground leading-relaxed animate-slide-in-bottom animation-delay-400'>
+                    Soy un <strong class='text-foreground'>Tecnólogo en Análisis y Desarrollo de Sistemas de Información</strong>, especializado en crear páginas web eficaces y sistemas de información
+                    innovadores que resuelven problemas reales.
+                </p>
+
+                <div class='flex flex-wrap gap-4 pt-4 animate-slide-in-bottom animation-delay-500'>
+                    <a
+                        href='#experience'
+                        class='inline-flex h-12 items-center justify-center rounded-md bg-accent px-8 text-base font-medium text-accent-foreground shadow transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
+                    >
+                        Ver mi trabajo
+                        <ArrowRight className='ml-2 h-4 w-4' />
+                    </a>
+                    <a
+                        href='/cv.pdf'
+                        target='_blank'
+                        class='inline-flex h-12 items-center justify-center rounded-md border border-input bg-background px-8 text-base font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
+                    >
+                        Descargar CV
+                    </a>
+                </div>
+
+                <div class='flex items-center gap-2 text-muted-foreground animate-slide-in-bottom animation-delay-550'>
+                    <MapPin className='h-5 w-5 text-accent' />
+                    <span class='text-base font-medium'>{personal.ubication}</span>
+                </div>
+
+                <div class='flex gap-6 animate-slide-in-bottom animation-delay-600'>
+                    <a href='https://github.com' target='_blank' rel='noopener noreferrer' class='text-muted-foreground hover:text-accent transition-colors'>
+                        <Github className='h-6 w-6' />
+                        <span class='sr-only'>GitHub</span>
+                    </a>
+                    <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' class='text-muted-foreground hover:text-accent transition-colors'>
+                        <Linkedin className='h-6 w-6' />
+                        <span class='sr-only'>LinkedIn</span>
+                    </a>
+                    <a href='mailto:contacto@camiloternera.com' class='text-muted-foreground hover:text-accent transition-colors'>
+                        <Mail className='h-6 w-6' />
+                        <span class='sr-only'>Email</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class='hidden md:flex justify-center animate-fade-in animation-delay-700'>
+                <div class='relative group'>
+                    <div class='absolute -inset-1 bg-gradient-to-r from-accent to-primary rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000 group-hover:duration-200'></div>
+                    <Image
+                        src={profileImage}
+                        alt={personal.name}
+                        width={320}
+                        height={320}
+                        class='relative w- h-100 object-cover rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500'
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

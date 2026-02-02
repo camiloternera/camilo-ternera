@@ -1,0 +1,125 @@
+---
+import {Menu, X, Sun, Moon} from 'lucide-react';
+import data from '../data/portafolio.json';
+import {Image} from 'astro:assets';
+import profileImage from '../assets/img/recortada 3.jpg';
+
+const {personal} = data;
+const links = [
+    {name: 'Sobre mí', href: '#about'},
+    {name: 'Habilidades', href: '#skills'},
+    {name: 'Experiencia', href: '#experience'},
+    {name: 'Contacto', href: '#contact'}
+];
+---
+
+<header class='fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border'>
+    <div class='container mx-auto px-4 md:px-6 h-16 flex items-center justify-between'>
+        <!-- Logo -->
+        <a href='#' class='flex items-center gap-2 text-xl font-bold tracking-tighter hover:text-primary transition-colors'>
+            <div class='md:hidden w-8 h-8 rounded-full overflow-hidden border border-border'>
+                <Image src={profileImage} alt={personal.name} width={32} height={32} class='w-full h-full object-cover' />
+            </div>
+            <span class='hidden md:block'>CT</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class='hidden md:flex items-center gap-8'>
+            {
+                links.map((link) => (
+                    <a href={link.href} class='text-sm font-medium text-muted-foreground hover:text-foreground transition-colors'>
+                        {link.name}
+                    </a>
+                ))
+            }
+        </nav>
+
+        <!-- CTA & Theme Toggle -->
+        <div class='flex items-center gap-4'>
+            <button
+                id='theme-toggle'
+                class='inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground transition-colors'
+                aria-label='Alternar tema'
+            >
+                <Sun className='h-4 w-4 hidden dark:block' />
+                <Moon className='h-4 w-4 block dark:hidden' />
+            </button>
+
+            <div class='hidden md:flex'>
+                <a
+                    href='#contact'
+                    class='inline-flex h-9 items-center justify-center rounded-full border border-border bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow-sm transition-colors hover:opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
+                >
+                    Hablemos
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id='mobile-menu-btn' class='md:hidden text-foreground p-2' aria-label='Menu'>
+                <Menu className='w-6 h-6' id='menu-icon' />
+                <X className='w-6 h-6 hidden' id='close-icon' />
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Menu Dropdown -->
+    <div id='mobile-menu' class='hidden md:hidden border-b border-border bg-background'>
+        <nav class='flex flex-col p-4 gap-4'>
+            {
+                links.map((link) => (
+                    <a href={link.href} class='text-base font-medium text-muted-foreground hover:text-accent transition-colors'>
+                        {link.name}
+                    </a>
+                ))
+            }
+            <a
+                href='#contact'
+                class='inline-flex h-10 items-center justify-center rounded-md bg-accent px-4 text-sm font-medium text-accent-foreground shadow transition-colors hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
+            >
+                Hablemos
+            </a>
+        </nav>
+    </div>
+</header>
+
+<script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    const themeToggle = document.getElementById('theme-toggle');
+
+    if (themeToggle) {
+        themeToggle.addEventListener('click', () => {
+            const isDark = document.documentElement.classList.contains('dark');
+            const newTheme = isDark ? 'light' : 'dark';
+
+            if (newTheme === 'dark') {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
+
+            localStorage.setItem('theme', newTheme);
+        });
+    }
+
+    if (menuBtn && mobileMenu && menuIcon && closeIcon) {
+        menuBtn.addEventListener('click', () => {
+            const isExpanded = mobileMenu.classList.contains('hidden');
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach((link) => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+    }
+</script>

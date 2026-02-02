@@ -1,0 +1,159 @@
+---
+import {Mail, Phone, MapPin, Send} from 'lucide-react';
+---
+
+<section id='contact' class='py-20 bg-secondary/30 animate-fade-in'>
+    <div class='container mx-auto px-4 md:px-6'>
+        <div class='text-center mb-16 space-y-4'>
+            <h2 class='text-3xl md:text-4xl font-bold tracking-tight text-foreground'>Trabajemos juntos</h2>
+            <div class='h-1 w-20 bg-accent mx-auto rounded-full'></div>
+            <p class='text-muted-foreground max-w-2xl mx-auto'>¿Tienes un proyecto en mente? Me encantaría escuchar sobre él y ver cómo puedo ayudarte a hacerlo realidad.</p>
+        </div>
+
+        <div class='grid md:grid-cols-2 gap-12 bg-card border border-border rounded-2xl p-8 md:p-12 shadow-sm'>
+            <!-- Contact Info -->
+            <div class='space-y-8'>
+                <div>
+                    <h3 class='text-2xl font-bold text-foreground mb-6'>Información de contacto</h3>
+                    <p class='text-muted-foreground mb-8'>Estoy disponible para proyectos freelance, colaboraciones o simplemente para conversar sobre tecnología y desarrollo web.</p>
+                </div>
+
+                <div class='space-y-6'>
+                    <div class='flex items-start gap-4'>
+                        <div class='p-3 rounded-lg bg-secondary text-accent'>
+                            <Mail className='h-6 w-6' />
+                        </div>
+                        <div>
+                            <h4 class='font-medium text-foreground'>Email</h4>
+                            <a href='mailto:contacto@camiloternera.com' class='text-muted-foreground hover:text-accent transition-colors'> contacto@camiloternera.com </a>
+                        </div>
+                    </div>
+
+                    <div class='flex items-start gap-4'>
+                        <div class='p-3 rounded-lg bg-secondary text-accent'>
+                            <Phone className='h-6 w-6' />
+                        </div>
+                        <div>
+                            <h4 class='font-medium text-foreground'>Teléfono</h4>
+                            <a href='tel:+573001234567' class='text-muted-foreground hover:text-accent transition-colors'> +57 300 123 4567 </a>
+                        </div>
+                    </div>
+
+                    <div class='flex items-start gap-4'>
+                        <div class='p-3 rounded-lg bg-secondary text-accent'>
+                            <MapPin className='h-6 w-6' />
+                        </div>
+                        <div>
+                            <h4 class='font-medium text-foreground'>Ubicación</h4>
+                            <p class='text-muted-foreground'>Colombia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form -->
+            <div>
+                <h3 class='text-2xl font-bold text-foreground mb-6'>Envíame un mensaje</h3>
+                <p class='text-muted-foreground mb-8'>Completa el formulario y me pondré en contacto contigo lo antes posible.</p>
+
+                <form id='contact-form' class='space-y-4'>
+                    <div class='space-y-2'>
+                        <label for='name' class='text-sm font-medium text-foreground'>Nombre</label>
+                        <input
+                            type='text'
+                            id='name'
+                            name='name'
+                            required
+                            class='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'
+                            placeholder='Tu nombre'
+                        />
+                    </div>
+
+                    <div class='space-y-2'>
+                        <label for='email' class='text-sm font-medium text-foreground'>Email</label>
+                        <input
+                            type='email'
+                            id='email'
+                            name='email'
+                            required
+                            class='flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50'
+                            placeholder='tu@email.com'
+                        />
+                    </div>
+
+                    <div class='space-y-2'>
+                        <label for='message' class='text-sm font-medium text-foreground'>Mensaje</label>
+                        <textarea
+                            id='message'
+                            name='message'
+                            rows='4'
+                            required
+                            class='flex w-full rounded-md border border-input bg-background px-3 py-2 text-sm text-foreground ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-none'
+                            placeholder='¿Cómo puedo ayudarte?'></textarea>
+                    </div>
+
+                    <button
+                        type='submit'
+                        id='submit-btn'
+                        class='inline-flex w-full items-center justify-center rounded-md bg-accent px-4 py-2.5 text-sm font-bold text-accent-foreground shadow transition-all hover:bg-accent/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50'
+                    >
+                        <span>Enviar mensaje</span>
+                        <Send className='ml-2 h-4 w-4' />
+                    </button>
+
+                    <p id='form-status' class='text-sm text-center mt-4 hidden'></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    const form = document.getElementById('contact-form') as HTMLFormElement;
+    const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+    const statusMsg = document.getElementById('form-status') as HTMLParagraphElement;
+
+    if (form) {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+
+            // Update UI state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="animate-spin mr-2">⏳</span> Enviando...';
+            statusMsg.classList.add('hidden');
+            statusMsg.className = 'text-sm text-center mt-4 hidden'; // Reset classes
+
+            try {
+                const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    statusMsg.textContent = '¡Mensaje enviado con éxito! Me pondré en contacto pronto.';
+                    statusMsg.classList.remove('hidden');
+                    statusMsg.classList.add('text-green-500');
+                    form.reset();
+                } else {
+                    throw new Error(result.message || 'Error al enviar el mensaje');
+                }
+            } catch (error) {
+                statusMsg.textContent = 'Hubo un error al enviar el mensaje. Por favor, intenta nuevamente.';
+                statusMsg.classList.remove('hidden');
+                statusMsg.classList.add('text-red-500');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML =
+                    '<span>Enviar mensaje</span> <svg class="ml-2 h-4 w-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>';
+            }
+        });
+    }
+</script>
