@@ -28,7 +28,7 @@ export const POST: APIRoute = async ({ request }) => {
 
         const { data: emailData, error } = await resend.emails.send({
             from: 'Portfolio Contact <onboarding@resend.dev>', // Update with your verify domain
-            to: ['camiloternera@example.com'], // Update with your email
+            to: ['camiloterneraduque@gmail.com'],
             subject: `Nuevo mensaje de ${name}`,
             html: `
         <h2>Nuevo mensaje de contacto</h2>
