@@ -134,8 +134,10 @@ import {Mail, Phone, MapPin, Send} from 'lucide-react';
                     },
                     body: JSON.stringify(data)
                 });
+                console.log({response});
 
                 const result = await response.json();
+                console.log({result});
 
                 if (response.ok) {
                     statusMsg.textContent = '¡Mensaje enviado con éxito! Me pondré en contacto pronto.';

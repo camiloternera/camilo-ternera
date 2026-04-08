@@ -11,6 +11,7 @@ const __dirname = dirname(__filename); // Obtengo el nombre del directorio
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'server',
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],

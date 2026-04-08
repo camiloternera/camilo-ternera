@@ -1,6 +1,7 @@
 
 import type { APIRoute } from 'astro';
 import { Resend } from 'resend';
+import { getContactEmailTemplate } from '@/lib/email-templates';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
@@ -28,15 +29,9 @@ export const POST: APIRoute = async ({ request }) => {
 
         const { data: emailData, error } = await resend.emails.send({
             from: 'Portfolio Contact <onboarding@resend.dev>', // Update with your verify domain
-            to: ['camiloterneraduque@gmail.com'],
+            to: [import.meta.env.CONTACT_TO_EMAIL],
             subject: `Nuevo mensaje de ${name}`,
-            html: `
-        <h2>Nuevo mensaje de contacto</h2>
-        <p><strong>Nombre:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Mensaje:</strong></p>
-        <p>${message}</p>
-      `,
+            html: getContactEmailTemplate(name, email, message),
         });
 
         if (error) {
@@ -51,6 +46,7 @@ export const POST: APIRoute = async ({ request }) => {
             { status: 200 }
         );
     } catch (error) {
+        console.error("Error in API route:", error);
         return new Response(
             JSON.stringify({ message: 'Error interno del servidor' }),
             { status: 500 }

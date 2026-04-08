@@ -1,5 +1,6 @@
 interface ImportMetaEnv {
     readonly RESEND_API_KEY: string;
+    readonly CONTACT_TO_EMAIL: string;
 }
 
 interface ImportMeta {
