@@ -1,10 +1,11 @@
 {
     "personal": {
-        "name": "Camilo Ternera",
-        "ubication": "Barranquilla, Colombia",
+        "name": "Camilo Andres Ternera Duque",
+        "ubication": "Barranquilla, Atlantico - Colombia",
         "avatar": "@/assets/img/recortada 3.jpg",
-        "curriculum": "https://camiloternera.com"
+        "curriculum": "https://camiloternera.github.io/"
     },
+    "summary": "Desarrollador de software con 4 años de experiencia y dominio en tecnologías como HTML5, CSS3 y JAVASCRIPT para la elaboración de páginas y aplicaciones web, con conocimientos en .NET 8 por el lado del Back-End, competente manejando bases de datos en sistema de gestión como SQL Server. Preparado para realizar buenas prácticas, dispuesto a trabajar en equipo en proyectos impuesto por la empresa, capaz de escuchar consejos y modificaciones de acuerdo con la mejor eficiencia del proyecto.",
     "skills": [
         {
             "name": "HTML",
@@ -61,19 +62,64 @@
     ],
     "experience": [
         {
-            "company": "DinamicApps S.A.S",
-            "role": "Desarrollador Full Stack",
-            "startDate": "2022-04-02",
-            "endDate": "2024-05-20",
+            "company": "ENTERNOVA S.A.S",
+            "role": "Arquitecto de datos",
+            "startDate": "2024-08-01",
+            "endDate": "Present",
             "responsibilities": [
-                "Diseñar, crear o modificar estructura de base de datos en SQL Server",
-                "Implementar lógica de negocio y manipular datos mediante LINQ para consultas eficientes.",
-                "Creación de componentes reutilizables, gestión de estado e integración de APIs."
+                "Analizo las historias de usuario (HU) para diseñar la estructura de la base de datos, garantizando que cumpla con los requisitos funcionales y de negocio.",
+                "Reviso el código del proyecto mediante pull requests (PR) para asegurar la estandarización y buenas prácticas en el esquema de base de datos.",
+                "Colaboro con el equipo backend para validar el diseño de la base de datos y alinear la implementación con la arquitectura definida.",
+                "Creo scripts de datos semilla que permiten poblar las tablas con información inicial necesaria para el correcto funcionamiento de la aplicación.",
+                "Ejecuto pipelines y releases de base de datos, gestionando los despliegues en los entornos de desarrollo (DEV) y pruebas (UAT).",
+                "Desarrollo scripts con lógica PreDeploy y PostDeploy para garantizar migraciones controladas y sin errores en los distintos ambientes.",
+                "Apoyo la migración de datos desde la aplicación web anterior hacia la nueva, asegurando la integridad y consistencia de la información.",
+                "Participo en reuniones con el equipo de negocio para validar la correcta interpretación y ejecución de las historias de usuario.",
+                "Contribuyo a la creación de endpoints para el cumplimiento de las HU, trabajando de la mano con el equipo backend."
+            ]
+        },
+        {
+            "company": "ENTERNOVA S.A.S",
+            "role": "Desarrollador Senior FullStack",
+            "startDate": "2024-05-01",
+            "endDate": "2024-08-01",
+            "responsibilities": [
+                "Desarrollé más de 15 endpoints RESTful con C# y .NET 8 para dar soporte a las historias de usuario, garantizando una comunicación eficiente entre frontend y base de datos.",
+                "Diseñé y creé tablas en SQL Server para implementar la lógica de negocio requerida, asegurando integridad referencial y optimización de consultas.",
+                "Participé en reuniones con el equipo de negocio para analizar y validar requisitos, alineando las soluciones técnicas con las necesidades del cliente.",
+                "Contribuí a la calidad del código mediante revisiones en pull requests y en la estandarización de prácticas de desarrollo."
+            ]
+        },
+        {
+            "company": "DINAMICAPPS S.A.S",
+            "role": "Desarrollador SemiSenior FullStack",
+            "startDate": "2022-04-01",
+            "endDate": "2024-05-01",
+            "responsibilities": [
+                "Diseñé SP en SQL Server para la lectura de reportes.",
+                "Diseñé la lógica de la base de datos, optimizando consultas y reduciendo el tiempo de respuesta.",
+                "Implementé 100+ endpoints para funcionalidades de la aplicación.",
+                "Desarrollé el frontend de 4 módulos (Contabilidad, Tesorería, Presupuesto, Cuentas por pagar) usando React y TailwindCSS, mejorando la experiencia de usuario y la mantenibilidad del código."
             ]
         }
     ],
+    "education": [
+        {
+            "institution": "Servicio de aprendizaje - SENA",
+            "degree": "Tecnico en Programacion de Software",
+            "startDate": "2021",
+            "endDate": "2022"
+        },
+        {
+            "institution": "Servicio de aprendizaje - SENA",
+            "degree": "Tecnologo en analisis y desarrollo de sistemas de informacion",
+            "startDate": "2016",
+            "endDate": "2018"
+        }
+    ],
     "contact": {
-        "email": "camiloternera@gmail.com",
+        "email": "camiloterneraduque@gmail.com",
+        "phone": "+57 304 204 7713",
         "socials": [
             {
                 "name": "GitHub",
@@ -82,7 +128,7 @@
             },
             {
                 "name": "LinkedIn",
-                "url": "https://www.linkedin.com/in/camiloternera/",
+                "url": "https://www.linkedin.com/in/camilo-ternera/",
                 "icon": "linkedin"
             },
             {
