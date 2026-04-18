@@ -4,6 +4,7 @@ import {type Personal} from '../types/portafolio';
 import data from '../data/portafolio.json';
 import {Image} from 'astro:assets';
 import profileImage from '../assets/img/recortada 3.jpg';
+import cvFile from '../assets/cv/Software_Engineer.pdf';
 
 const personal: Personal = data.personal;
 ---
@@ -33,7 +34,8 @@ const personal: Personal = data.personal;
                         <ArrowRight className='ml-2 h-4 w-4' />
                     </a>
                     <a
-                        href='/cv.pdf'
+                        href={cvFile}
+                        download='Software_Engineer.pdf'
                         target='_blank'
                         class='inline-flex h-12 items-center justify-center rounded-md border border-input bg-background px-8 text-base font-medium shadow-sm transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring'
                     >
