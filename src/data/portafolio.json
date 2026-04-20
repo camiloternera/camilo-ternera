@@ -5,7 +5,7 @@
         "avatar": "@/assets/img/recortada 3.jpg",
         "curriculum": "https://camiloternera.github.io/"
     },
-    "summary": "Desarrollador de software con 4 años de experiencia y dominio en tecnologías como HTML5, CSS3 y JAVASCRIPT para la elaboración de páginas y aplicaciones web, con conocimientos en .NET 8 por el lado del Back-End, competente manejando bases de datos en sistema de gestión como SQL Server. Preparado para realizar buenas prácticas, dispuesto a trabajar en equipo en proyectos impuesto por la empresa, capaz de escuchar consejos y modificaciones de acuerdo con la mejor eficiencia del proyecto.",
+    "summary": "<p><strong class='text-foreground'>Desarrollador de software con 4 años de experiencia</strong> y dominio en tecnologías como <strong class='text-foreground'>HTML5, CSS3 y JAVASCRIPT</strong> para la elaboración de páginas y aplicaciones web, con conocimientos en <strong class='text-foreground'>.NET 8</strong> por el lado del Back-End. Competente manejando bases de datos en sistema de gestión como <strong class='text-foreground'>SQL Server</strong>.</p><p>A lo largo de mi carrera, he diseñado y optimizado <strong class='text-foreground'>estructuras de bases de datos</strong> y desarrollado robustas APIs RESTful. Como <strong class='text-foreground'>Arquitecto de Datos y Desarrollador FullStack</strong>, me destaco por asegurar la integridad de la información, ejecutar despliegues continuos y trabajar proactivamente para alinear las soluciones técnicas con las necesidades del cliente.</p>",
     "skills": [
         {
             "name": "HTML",
@@ -67,15 +67,17 @@
             "startDate": "2024-08-01",
             "endDate": "Present",
             "responsibilities": [
-                "Analizo las historias de usuario (HU) para diseñar la estructura de la base de datos, garantizando que cumpla con los requisitos funcionales y de negocio.",
-                "Reviso el código del proyecto mediante pull requests (PR) para asegurar la estandarización y buenas prácticas en el esquema de base de datos.",
-                "Colaboro con el equipo backend para validar el diseño de la base de datos y alinear la implementación con la arquitectura definida.",
-                "Creo scripts de datos semilla que permiten poblar las tablas con información inicial necesaria para el correcto funcionamiento de la aplicación.",
-                "Ejecuto pipelines y releases de base de datos, gestionando los despliegues en los entornos de desarrollo (DEV) y pruebas (UAT).",
-                "Desarrollo scripts con lógica PreDeploy y PostDeploy para garantizar migraciones controladas y sin errores en los distintos ambientes.",
-                "Apoyo la migración de datos desde la aplicación web anterior hacia la nueva, asegurando la integridad y consistencia de la información.",
-                "Participo en reuniones con el equipo de negocio para validar la correcta interpretación y ejecución de las historias de usuario.",
-                "Contribuyo a la creación de endpoints para el cumplimiento de las HU, trabajando de la mano con el equipo backend."
+                "Lidero el diseño y evolución de la arquitectura de datos a partir del análisis de historias de usuario, definiendo estructuras de base de datos alineadas con los objetivos funcionales, técnicos y de negocio.",
+                "Tomo decisiones sobre modelado de datos, integridad, relaciones y estandarización del esquema, asegurando soluciones escalables, mantenibles y coherentes con la arquitectura del proyecto.",
+                "Defino lineamientos y buenas prácticas de diseño de base de datos, participando activamente en revisiones de código y pull requests para garantizar calidad, consistencia y cumplimiento técnico.",
+                "Trabajo de forma articulada con los equipos de backend y negocio para traducir requerimientos en soluciones de datos viables, anticipando impactos técnicos y proponiendo alternativas de implementación.",
+                "Diseño y construyo estrategias de carga inicial y datos semilla, garantizando la disponibilidad de información base para la correcta operación de la aplicación en distintos entornos.",
+                "Orquesto despliegues de base de datos en ambientes DEV y UAT mediante pipelines y releases, reduciendo riesgos de implementación y asegurando la estabilidad de las entregas.",
+                "Desarrollo y estructuro scripts de PreDeploy y PostDeploy para ejecutar migraciones controladas, resolver dependencias técnicas y minimizar errores durante los procesos de publicación.",
+                "Lidero actividades de migración de datos desde sistemas legados hacia la nueva solución, definiendo criterios de integridad, consistencia y trazabilidad de la información.",
+                "Identifico riesgos técnicos y propongo soluciones ante escenarios complejos relacionados con cambios de estructura, compatibilidad entre versiones, calidad de datos y continuidad operativa.",
+                "Participo en mesas de definición con negocio y equipos técnicos para asegurar una interpretación correcta de los requerimientos y orientar decisiones que impactan la solución de extremo a extremo.",
+                "Contribuyo técnicamente en la definición de endpoints y componentes backend cuando la solución requiere alineación directa entre reglas de negocio, persistencia y arquitectura de datos."
             ]
         },
         {

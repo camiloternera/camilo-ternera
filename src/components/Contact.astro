@@ -1,5 +1,10 @@
 ---
 import {Mail, Phone, MapPin, Send} from 'lucide-react';
+import data from '../data/portafolio.json';
+import { type Personal } from '../types/portafolio';
+
+const personal: Personal = data.personal;
+const contact = data.contact;
 ---
 
 <section id='contact' class='py-20 bg-secondary/30 animate-fade-in'>
@@ -25,7 +30,7 @@ import {Mail, Phone, MapPin, Send} from 'lucide-react';
                         </div>
                         <div>
                             <h4 class='font-medium text-foreground'>Email</h4>
-                            <a href='mailto:contacto@camiloternera.com' class='text-muted-foreground hover:text-accent transition-colors'> contacto@camiloternera.com </a>
+                            <a href={`mailto:${contact.email}`} class='text-muted-foreground hover:text-accent transition-colors'>{contact.email}</a>
                         </div>
                     </div>
 
@@ -35,7 +40,7 @@ import {Mail, Phone, MapPin, Send} from 'lucide-react';
                         </div>
                         <div>
                             <h4 class='font-medium text-foreground'>Teléfono</h4>
-                            <a href='tel:+573001234567' class='text-muted-foreground hover:text-accent transition-colors'> +57 300 123 4567 </a>
+                            <a href={`tel:${contact.phone.replace(/ /g, '')}`} class='text-muted-foreground hover:text-accent transition-colors'>{contact.phone}</a>
                         </div>
                     </div>
 
@@ -45,7 +50,7 @@ import {Mail, Phone, MapPin, Send} from 'lucide-react';
                         </div>
                         <div>
                             <h4 class='font-medium text-foreground'>Ubicación</h4>
-                            <p class='text-muted-foreground'>Colombia</p>
+                            <p class='text-muted-foreground'>{personal.ubication}</p>
                         </div>
                     </div>
                 </div>
