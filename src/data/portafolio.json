@@ -64,6 +64,7 @@
         {
             "company": "ENTERNOVA S.A.S",
             "role": "Arquitecto de datos",
+            "url": "https://www.enternova.net/",
             "startDate": "2024-08-01",
             "endDate": "Present",
             "responsibilities": [
@@ -83,6 +84,7 @@
         {
             "company": "ENTERNOVA S.A.S",
             "role": "Desarrollador Senior FullStack",
+            "url": "https://www.enternova.net/",
             "startDate": "2024-05-01",
             "endDate": "2024-08-01",
             "responsibilities": [
@@ -95,6 +97,7 @@
         {
             "company": "DINAMICAPPS S.A.S",
             "role": "Desarrollador SemiSenior FullStack",
+            "url": "https://dinamicapps.co/",
             "startDate": "2022-04-01",
             "endDate": "2024-05-01",
             "responsibilities": [

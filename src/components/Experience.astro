@@ -10,9 +10,10 @@ function formatDate(dateStr: string) {
     return `${months[parseInt(month) - 1]} ${year}`;
 }
 
-const jobs = data.experience.map(exp => ({
+const jobs = data.experience.map((exp) => ({
     title: exp.role,
     company: exp.company,
+    url: exp.url,
     period: `${formatDate(exp.startDate)} - ${formatDate(exp.endDate)}`,
     achievements: exp.responsibilities,
     tags: []
