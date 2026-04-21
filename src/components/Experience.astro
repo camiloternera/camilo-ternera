@@ -16,7 +16,7 @@ const jobs = data.experience.map((exp) => ({
     url: exp.url,
     period: `${formatDate(exp.startDate)} - ${formatDate(exp.endDate)}`,
     achievements: exp.responsibilities,
-    tags: []
+    tags: exp.skills || []
 }));
 ---
 

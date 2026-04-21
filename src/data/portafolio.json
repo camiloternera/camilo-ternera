@@ -8,56 +8,55 @@
     "summary": "<p><strong class='text-foreground'>Desarrollador de software con 4 años de experiencia</strong> y dominio en tecnologías como <strong class='text-foreground'>HTML5, CSS3 y JAVASCRIPT</strong> para la elaboración de páginas y aplicaciones web, con conocimientos en <strong class='text-foreground'>.NET 8</strong> por el lado del Back-End. Competente manejando bases de datos en sistema de gestión como <strong class='text-foreground'>SQL Server</strong>.</p><p>A lo largo de mi carrera, he diseñado y optimizado <strong class='text-foreground'>estructuras de bases de datos</strong> y desarrollado robustas APIs RESTful. Como <strong class='text-foreground'>Arquitecto de Datos y Desarrollador FullStack</strong>, me destaco por asegurar la integridad de la información, ejecutar despliegues continuos y trabajar proactivamente para alinear las soluciones técnicas con las necesidades del cliente.</p>",
     "skills": [
         {
-            "name": "HTML",
-            "icon": "html"
+            "category": "Frontend",
+            "icon": "Code2",
+            "items": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "TypeScript",
+                "React",
+                "Tailwind CSS",
+                "Astro"
+            ]
         },
         {
-            "name": "CSS",
-            "icon": "css"
+            "category": "Backend",
+            "icon": "Server",
+            "items": [
+                "Node.js",
+                "API REST",
+                "Authentication"
+            ]
         },
         {
-            "name": "JavaScript",
-            "icon": "javascript"
+            "category": "Bases de Datos",
+            "icon": "Database",
+            "items": [
+                "PostgreSQL",
+                "MySQL",
+                "SQL Server"
+            ]
         },
         {
-            "name": "React JS",
-            "icon": "react"
+            "category": "Herramientas",
+            "icon": "Wrench",
+            "items": [
+                "Git",
+                "GitHub",
+                "VS Code",
+                "Azure DevOps"
+            ]
         },
         {
-            "name": "SQL Server",
-            "icon": "sql-server"
-        },
-        {
-            "name": "C#",
-            "icon": "csharp"
-        },
-        {
-            "name": ".NET Framework",
-            "icon": "dotnet-framework"
-        },
-        {
-            "name": "Python",
-            "icon": "python"
-        },
-        {
-            "name": "Astro JS",
-            "icon": "astro"
-        },
-        {
-            "name": "Tailwind CSS",
-            "icon": "tailwindcss"
-        },
-        {
-            "name": "TypeScript",
-            "icon": "typescript"
-        },
-        {
-            "name": "Git",
-            "icon": "git"
-        },
-        {
-            "name": "GitHub",
-            "icon": "github"
+            "category": "Metodologías",
+            "icon": "Terminal",
+            "items": [
+                "Agile",
+                "Scrum",
+                "Clean Code",
+                "Testing"
+            ]
         }
     ],
     "experience": [
@@ -79,6 +78,12 @@
                 "Identifico riesgos técnicos y propongo soluciones ante escenarios complejos relacionados con cambios de estructura, compatibilidad entre versiones, calidad de datos y continuidad operativa.",
                 "Participo en mesas de definición con negocio y equipos técnicos para asegurar una interpretación correcta de los requerimientos y orientar decisiones que impactan la solución de extremo a extremo.",
                 "Contribuyo técnicamente en la definición de endpoints y componentes backend cuando la solución requiere alineación directa entre reglas de negocio, persistencia y arquitectura de datos."
+            ],
+            "skills": [
+                "SQL Server",
+                "Arquitectura de Datos",
+                "C#",
+                ".NET 8"
             ]
         },
         {
@@ -92,6 +97,12 @@
                 "Diseñé y creé tablas en SQL Server para implementar la lógica de negocio requerida, asegurando integridad referencial y optimización de consultas.",
                 "Participé en reuniones con el equipo de negocio para analizar y validar requisitos, alineando las soluciones técnicas con las necesidades del cliente.",
                 "Contribuí a la calidad del código mediante revisiones en pull requests y en la estandarización de prácticas de desarrollo."
+            ],
+            "skills": [
+                "C#",
+                ".NET 8",
+                "SQL Server",
+                "REST API"
             ]
         },
         {
@@ -105,6 +116,13 @@
                 "Diseñé la lógica de la base de datos, optimizando consultas y reduciendo el tiempo de respuesta.",
                 "Implementé 100+ endpoints para funcionalidades de la aplicación.",
                 "Desarrollé el frontend de 4 módulos (Contabilidad, Tesorería, Presupuesto, Cuentas por pagar) usando React y TailwindCSS, mejorando la experiencia de usuario y la mantenibilidad del código."
+            ],
+            "skills": [
+                "React",
+                "Tailwind CSS",
+                "SQL Server",
+                "JavaScript",
+                ".NET Core"
             ]
         }
     ],
