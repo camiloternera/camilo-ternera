@@ -1,12 +1,13 @@
 ---
 import {Github, Linkedin, Mail, ArrowRight, MapPin} from 'lucide-react';
-import {type Personal} from '../types/portafolio';
+import {type Personal, type Social} from '../types/portafolio';
 import data from '../data/portafolio.json';
 import {Image} from 'astro:assets';
 import profileImage from '../assets/img/recortada 3.jpg';
 import cvFile from '../assets/cv/Software_Engineer.pdf';
 
 const personal: Personal = data.personal;
+const social: Social[] = data.contact.socials;
 ---
 
 <section id='hero' class='min-h-[90vh] flex flex-col justify-center py-20 animate-fade-in'>
@@ -44,15 +45,15 @@ const personal: Personal = data.personal;
                 </div>
 
                 <div class='flex gap-6 animate-slide-in-bottom animation-delay-600'>
-                    <a href='https://github.com' target='_blank' rel='noopener noreferrer' class='text-muted-foreground hover:text-accent transition-colors'>
+                    <a href={social.find((s) => s.name === 'GitHub')?.url} target='_blank' rel='noopener noreferrer' class='text-muted-foreground hover:text-accent transition-colors'>
                         <Github className='h-6 w-6' />
                         <span class='sr-only'>GitHub</span>
                     </a>
-                    <a href='https://linkedin.com' target='_blank' rel='noopener noreferrer' class='text-muted-foreground hover:text-accent transition-colors'>
+                    <a href={social.find((s) => s.name === 'LinkedIn')?.url} target='_blank' rel='noopener noreferrer' class='text-muted-foreground hover:text-accent transition-colors'>
                         <Linkedin className='h-6 w-6' />
                         <span class='sr-only'>LinkedIn</span>
                     </a>
-                    <a href='mailto:contacto@camiloternera.com' class='text-muted-foreground hover:text-accent transition-colors'>
+                    <a href={social.find((s) => s.name === 'Email')?.url} class='text-muted-foreground hover:text-accent transition-colors'>
                         <Mail className='h-6 w-6' />
                         <span class='sr-only'>Email</span>
                     </a>
